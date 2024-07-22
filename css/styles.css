@@ -1,0 +1,85 @@
+:root{
+    --color-primary: #092635;
+    --color-secondary: #1B4242;
+    --color-tertiary: #8af7f1;
+    --color-fourthiary: #9EC8B9;
+    --color-fifthiary: #000000; 
+    --color-sixthiary: #06020c;
+}
+
+body{
+    background: #06020c;
+}
+
+.navbar-words{
+    color: white;
+    padding-left: 10vh;
+}
+
+#navbar2 {
+    border: 1px solid black;
+    box-shadow: 2px 2px 10px black;
+}
+
+#profile{
+    display: flex;
+    
+}
+
+.estrella {
+    position: relative;
+    color: white;
+    background: white;
+    width: 2vh;
+    height: 2vh;
+    border-radius: 50%;
+    animation: moveDiagonal 4s ease-in-out infinite; /* Aplica la animación 'move' */
+}
+
+@keyframes moveDiagonal{
+    0% { top: 0; left: 0; } 
+    25% { 
+        top: 0; left: calc(100vw - 2vh); 
+        }
+    100% { top: 0; left: 0; } /* Vuelve a la posición inicial */
+}
+
+#imgProfile{
+    margin-top: 10vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20vh;
+}
+
+.imagen{
+    background: #02000f;
+    margin-left: 70vh;
+    margin-right: 70vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+.imagen img {
+    border-radius: 50%;
+    border: 1px solid var(--color-sixthiary);
+    box-shadow: 2px 2px 10px var(--color-sixthiary);
+}
+
+.carousel-1{
+    margin-left: 25vh;
+    background: var(--color-tertiary);
+    width: 130vh;
+    height: 86.9vh;
+    border: 1px solid black;
+}
+
+h5, P{
+    color: white;
+}
+
+button{
+    background: white;
+}
