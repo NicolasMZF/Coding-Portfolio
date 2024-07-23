@@ -26,22 +26,75 @@ body{
     
 }
 
-.estrella {
+
+.starContainer{
     position: relative;
-    color: white;
-    background: white;
-    width: 2vh;
-    height: 2vh;
-    border-radius: 50%;
-    animation: moveDiagonal 4s ease-in-out infinite; /* Aplica la animación 'move' */
+    width: 100%;
+    height: 100%;
 }
 
-@keyframes moveDiagonal{
-    0% { top: 0; left: 0; } 
-    25% { 
-        top: 0; left: calc(100vw - 2vh); 
-        }
-    100% { top: 0; left: 0; } /* Vuelve a la posición inicial */
+
+
+.starContainer img:nth-child(1) {
+    top: 10%;
+    left: 20%;
+}
+
+.starContainer img:nth-child(2) {
+    top: 20%;
+    left: 60%;
+}
+
+.starContainer img:nth-child(3) {
+    top: 30%;
+    left: 40%;
+}
+
+.starContainer img:nth-child(4) {
+    top: 90%;
+    left: 10%;
+}
+
+.starContainer img:nth-child(5) {
+    bottom: 80%;
+    right: 40%;
+}
+
+.starContainer img:nth-child(6) {
+    top: 80%;
+    left: 80%;
+}
+
+.starContainer img:nth-child(7) {
+    bottom: 10%;
+    left: 76%;
+}
+
+.starContainer img:nth-child(8) {
+    top: 80%;
+    left: 50%;
+}
+
+.starContainer img:nth-child(9) {
+    bottom: 10%;
+    left: 70%;
+}
+.starContainer img{
+    position: absolute;
+    width: 15px;
+    animation: stars 4s infinite alternate;
+}
+
+@keyframes stars{
+    0% {
+        opacity: 100%;
+    } 
+    50% {
+        opacity: 20%;
+    }
+    100% {
+        opacity: 100%;
+    }
 }
 
 #imgProfile{
@@ -50,6 +103,10 @@ body{
     text-align: center;
     align-items: center;
     margin-bottom: 20vh;
+}
+
+#profileImg{ 
+    background-color: #9EC8B9;
 }
 
 .imagen{
