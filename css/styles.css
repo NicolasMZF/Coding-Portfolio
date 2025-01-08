@@ -8,7 +8,7 @@
 }
 
 body{
-    background-image: url("../img/orangeRectangle.png");
+    background-image: url(../img/orangeRectangle.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
