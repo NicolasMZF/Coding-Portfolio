@@ -109,3 +109,54 @@ h1, h5, P{
     align-items: center;
     margin-bottom: 20vh;
  }
+
+ /**------------------------------------------------------------------------
+  *!                           Formation 
+  *------------------------------------------------------------------------**/
+
+.formation{
+    width: 80%;
+    margin-top: 40vh;
+    margin-left: 40vh;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20vh;
+}
+
+/**------------------------------------------------------------------------
+ *!                           Skills
+ *------------------------------------------------------------------------**/
+
+ .skills{
+    color: white;
+    background: rgb(31, 30, 30);
+    width: 50%;
+    height: 100%;
+    box-shadow: 1vh 1vh 1vh black;
+ }
+
+ .vertical{
+    margin-right: 1vh;
+    width: 10%;
+    writing-mode: vertical-lr;
+    text-decoration: underline;
+ }
+
+ .skillImg{
+    margin-right: 1vh;
+    margin-bottom: 1vh;
+    width: 10vh;
+    background: black;
+    border: 0.5vh solid black;
+    box-shadow: 1vh 1vh 1vh black;
+ }
+
+/**------------------------------------------------------------------------
+ *!                           Experiences
+ *------------------------------------------------------------------------**/
+
+ .experiences{
+    border: 1px solid red;
+    width: 80%;
+    margin-top: 40vh;
+ }
