@@ -10,9 +10,10 @@
 .background img{
     display: flex;
     width: 100%;
-    height: 100%;
-    position: fixed;
+    height: 570%;
+    position: absolute;
     z-index: -3;
+    rotate: 180deg;
 }
 
 body{
@@ -25,9 +26,26 @@ body{
  *!                           NAVBAR
  *------------------------------------------------------------------------**/
 
+ #navbar {
+    background: #0c041cd5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    position: fixed;
+    z-index: 1000;
+    padding: 1vh 0;
+}
+
+.navbarContainer{
+    margin-left: 30vh;
+}
+
 .navbar-words{
+    font-size: 3vh;
     color: white;
     padding-left: 10vh;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .navbar-words:hover{
@@ -35,13 +53,7 @@ body{
     text-decoration: underline;
 }
 
-#navbar2 {
-    background: #0c041cd5;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
+
 
 /**------------------------------------------------------------------------
  *!                           Home
@@ -57,20 +69,6 @@ circle {
     animation: stars 1s infinite linear;
 }
 
-@keyframes stars {
-    0% {
-        opacity: 0%;
-    }
-    50% {
-        opacity: 100%;
-    }
-    100% {
-        opacity: 0%
-    }
-    
-}
-
-
 
 @keyframes stars{
     0% {
@@ -84,16 +82,77 @@ circle {
     }
 }
 
+.profileContainer{
+    width: 100%;
+    border: 0.1vh solid transparent;
+    margin-top: 20vh;
+    margin-bottom: 60vh;
+    z-index: 8;
+}
 
-
-#Profile{
-    margin-top: 10vh;
+.profile{
+    margin-left: 90vh;
+    position: absolute;
     justify-content: center;
     text-align: center;
     align-items: center;
-    margin-bottom: 20vh;
+    margin-bottom: 40vh;
 }
 
+.forest img{
+    margin-top: 30vh;
+    position: fixed;
+    height: 70vh;
+    width: 100%;
+    z-index: -1;
+    animation: forest linear forwards;
+    animation-timeline: view(1vh 50vh);
+}
+
+.mountain img{
+    position: fixed;
+    height: 70vh;
+    width: 100%;
+    animation: mountain linear forwards;
+    animation-timeline: view(1vh 50vh);
+    z-index: -3;
+}
+
+.forestMountain img{
+    position: fixed;
+    height: 100vh;
+    width: 99%;
+    animation: forestMountain linear forwards;
+    animation-timeline: view(1vh 50vh);
+    z-index: -2;
+ }
+
+ @keyframes forest{
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(10vh);
+    }
+}
+
+@keyframes mountain{
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(10vh);
+    }
+}
+
+ @keyframes forestMountain {
+    from {
+        transform: translateY(0);
+    } to {
+        transform: translateY(80vh);
+    }
+    
+ }
 
 
 
@@ -107,12 +166,18 @@ h1, h5, P{
 
  .professionalProfile{
     width: 80%;
-    margin-top: 40vh;
     justify-content: center;
     text-align: center;
     align-items: center;
     margin-bottom: 20vh;
+    margin-top: 20vh;
+    animation: fadeIn linear forwards;
+    animation-timeline: view(50% 1%);
+    z-index: 9;
  }
+
+
+
 
  /**------------------------------------------------------------------------
   *!                           Formation 
@@ -158,9 +223,27 @@ h1, h5, P{
 /**------------------------------------------------------------------------
  *!                           Experiences
  *------------------------------------------------------------------------**/
+.experiences h5,.experiences p{
+    color: #000000; 
+}
+
+.experienceCapt{
+    background: rgba(255, 255, 255, 0.336);
+}
 
  .experiences{
-    border: 1px solid red;
-    width: 80%;
+    text-align: center;
+    justify-content: center;
+    width: 99%;
     margin-top: 40vh;
+ }
+
+ .experiences img{
+    height: 50vh;
+    width: 100%;
+ }
+
+ .experienceCarousel{
+    margin-left: 55vh;
+    width: 50%;
  }

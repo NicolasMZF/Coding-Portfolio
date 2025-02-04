@@ -13,14 +13,14 @@
 </div>
   <header>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg" id="navbar2" >
+    <nav class="navbar navbar-expand-lg" id="navbar" >
 
-        <div class="container-fluid" >
-          <a class="navbar-brand navbar-words" href="#">Home</a>
+        <div class="container-fluid brandContainer justify-content-center">
+          <a class="navbar-brand navbar-words" href="#">Nicolas Steven Martinez</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="collapse navbar-collapse navbarContainer" id="navbarNav">
             <ul class="navbar-nav ">
               <li class="nav-item">
                 <a class="nav-link navbar-words" href="#professionalProfile">Professional Profile</a>
@@ -38,22 +38,29 @@
           </div>
         </div>
       </nav>
-      <svg id="starrySky" width="100" height="100"></svg>
+      
     </header>
 <br>
-    <main id="main">
-
+<main>
+<div class="profileContainer">
       <!-- Profile -->
-       <div class="profile">
-        <div id="Profile">
-          <div class="imagen">   
+      <div class="profile">
+        <div id="Profile">  
           <h5>Nicolas Steven Martinez Fonseca</h5>
           <h5>Developer</h5>
           <h5>Building software since 2022</h5>
-          </div>
         </div>
        </div>
-
+       <div class="forestMountain">
+        <img src="img/forestMountain.png" alt="">
+      </div>
+      <div class="forest">
+        <img src="img/Forest3.PNG" alt="">
+      </div>
+      <div class="mountain">
+        <img src="img/mountain1.png" alt="">
+      </div>
+</div>
 
        <!-- Professional Profile -->
        <div class="professionalProfile" id="professionalProfile">
@@ -71,6 +78,7 @@
         </div>
        </div>
 
+
        <!-- Formation -->
        <div class="formation" id="formation">
         <br><br><br><br>
@@ -82,14 +90,14 @@
             <h1>Formation</h1>
             <p>
               Technologist in Analysis & Development of Software, SENA, Bogotá D.C
-              Junio 2022 — Enero 2025
+              June 2022 — January 2025
             </p>
             <p>
               Bachiller Académico, I.E Escuela Normal Superior Valle de Tenza, Somondoco, Boyacá
-              Enero 2018 — Diciembre 2020
+              January 2018 — December 2020
             </p>
             <p>Media Basica, I.E Escuela Normal Superior Valle de Tenza, Somondoco, Boyacá
-              Enero 2009 — Diciembre 2018
+              January 2009 — December 2018
             </p>
           </div>
         </div>
@@ -155,15 +163,49 @@
        <!--Experiences-->
        <div class="experiences" id="experiences">
         <div class="row">
-          <div class="col"><h1>Experiences</h1></div>
-          <div class="col"></div>
+          <div>
+            <br><br><br><br>
+            <h1>Experiences</h1>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide experienceCarousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active carouselImage" data-bs-interval="10000">
+                  <img src="img/etb.jpg" class="img-fluid" alt="...">
+                  <div class="carousel-caption d-none d-md-block experienceCapt">
+                    <h5>ETB</h5>
+                    <p>Software Analyst & Developer.</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <img src="img/sena.jpg" class="img-fluid" alt="...">
+                  <div class="carousel-caption d-none d-md-block experienceCapt">
+                    <h5>SENA</h5>
+                    <p>Software Analyst & Developer.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev carouselButton" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
         </div>
        </div>
-       
-       
     </main>
-
+<br><br><br><br>
     <footer>
+      <svg id="starrySky" width="100" height="100"></svg>
+      <div>
+        
+      </div>
     </footer>
     <script src="js/script.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
