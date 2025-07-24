@@ -7,20 +7,41 @@
     --color-sixthiary: #06020c;
 }
 
-.background img{
-    display: flex;
-    width: 100%;
-    height: 570%;
-    position: absolute;
-    z-index: -3;
-    rotate: 180deg;
+
+.eb-garamond-p {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
-body{
-    padding: 0;
+*{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
     font-family: 'Times New Roman', Times, serif;
 }
+
+.background {
+    position: absolute;
+    background: linear-gradient(
+        to bottom, 
+        #0f021b 0%,
+        #1a082c 30%,
+        #f97700 150%
+        );
+    width: 100%;
+    height: 500%;
+    z-index: -3;
+    transform: rotate(180deg);
+}
+
 
 /**------------------------------------------------------------------------
  *!                           NAVBAR
@@ -37,22 +58,39 @@ body{
     padding: 1vh 0;
 }
 
+.navbar-toggler {
+  border-color: white; /* Optional: change border */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
+}
+
 .navbarContainer{
     margin-left: 30vh;
 }
 
-.navbar-words{
+.navbar a,
+.navbar a:visited,
+.navbar a:focus,
+.navbar a:active{
     font-size: 3vh;
     color: white;
     padding-left: 10vh;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-.navbar-words:hover{
+.navbar a:hover{
     color: rgb(212, 163, 71);
     text-decoration: underline;
 }
 
+@media screen and (max-width:200vh) {
+    .navbarTab {
+        background: #0c041cd5;
+        border: 0.5vh solid white;
+    }
+}
 
 
 /**------------------------------------------------------------------------
@@ -61,8 +99,9 @@ body{
 
 
 svg {
+    position: absolute;
     width: 100%;
-    height: 300px;
+    height: 230vh;
 }
 
 circle {
@@ -83,48 +122,50 @@ circle {
 }
 
 .profileContainer{
+    display: flex;
     width: 100%;
+    justify-content: center;
     border: 0.1vh solid transparent;
     margin-top: 20vh;
-    margin-bottom: 60vh;
+    margin-bottom: 70vh;
     z-index: 8;
 }
 
 .profile{
-    margin-left: 90vh;
-    position: absolute;
-    justify-content: center;
     text-align: center;
     align-items: center;
-    margin-bottom: 40vh;
 }
 
 .forest img{
+    left: 0vh;
     margin-top: 30vh;
     position: fixed;
     height: 70vh;
     width: 100%;
-    z-index: -1;
+    z-index: 3;
     animation: forest linear forwards;
     animation-timeline: view(1vh 50vh);
 }
 
 .mountain img{
+    left: 0vh;
     position: fixed;
-    height: 70vh;
+    height: 50vh;
+    bottom: 1vh;
     width: 100%;
     animation: mountain linear forwards;
     animation-timeline: view(1vh 50vh);
-    z-index: -3;
+    z-index: 2;
 }
 
 .forestMountain img{
+    left: 0vh;
     position: fixed;
     height: 100vh;
-    width: 99%;
+    width: 100%;
     animation: forestMountain linear forwards;
     animation-timeline: view(1vh 50vh);
-    z-index: -2;
+    z-index: 1;
  }
 
  @keyframes forest{
@@ -164,48 +205,111 @@ h1, h5, P{
  *!                           Professional Profile
  *------------------------------------------------------------------------**/
 
- .professionalProfile{
-    width: 80%;
+.professionalContainer{
+    display: flex;
+    width: 100%;
     justify-content: center;
-    text-align: center;
-    align-items: center;
     margin-bottom: 20vh;
     margin-top: 20vh;
+}
+
+ .professionalProfile{
+    width: 80%;
+    text-align: center;
     animation: fadeIn linear forwards;
     animation-timeline: view(50% 1%);
-    z-index: 9;
+    z-index: 1;
  }
 
+ .professionalProfile p {
+    font-size: large;
+    color: rgb(255, 255, 255);
+ }
 
+ .professionalProfile h1{
+    font-style: italic;
+ }
+
+ .professionalContainer img {
+    rotate: 20deg;
+    width: 100%;
+    height: 100%;
+    border: 1vh solid rgb(0, 0, 0);
+ }
+
+ .professionalProfile .img-container {
+    margin-left: 5vh;
+    display: flex;
+    justify-content: center;
+    rotate: -20deg;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    width: 100%;
+    height: 80%;
+ }
 
 
  /**------------------------------------------------------------------------
   *!                           Formation 
   *------------------------------------------------------------------------**/
 
+.formationContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+
+}
+
 .formation{
     width: 80%;
-    margin-top: 40vh;
-    margin-left: 40vh;
     text-align: center;
     align-items: center;
-    margin-bottom: 20vh;
+    z-index: 1;
 }
+
+  .formation p {
+    font-size: large;
+    color: rgb(255, 255, 255);
+ }
+
+ .formation h1{
+    font-style: italic;
+ }
+
+.formation img {
+    rotate: 20deg;
+    width: 100%;
+    height: 100%;
+    border: 1vh solid rgb(0, 0, 0);
+ }
+
+  .formation .img-container {
+    margin-right: 5vh;
+    display: flex;
+    justify-content: center;
+    rotate: -20deg;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    width: 100%;
+    height: 80%;
+ }
 
 /**------------------------------------------------------------------------
  *!                           Skills
  *------------------------------------------------------------------------**/
 
  .skills{
+    position: relative;
     color: white;
     background: rgb(31, 30, 30);
-    width: 50%;
+    width: 60%;
     height: 100%;
     box-shadow: 1vh 1vh 1vh black;
+    z-index: 1;
  }
 
  .vertical{
-    margin-right: 1vh;
+    margin-right: 3vh;
     width: 10%;
     writing-mode: vertical-lr;
     text-decoration: underline;
@@ -223,7 +327,23 @@ h1, h5, P{
 /**------------------------------------------------------------------------
  *!                           Experiences
  *------------------------------------------------------------------------**/
-.experiences h5,.experiences p{
+.experienceContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+}
+
+ .experience{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    text-align: center;
+    align-items: center;
+ }
+
+ .experience h5,.experience p{
     color: #000000; 
 }
 
@@ -231,19 +351,48 @@ h1, h5, P{
     background: rgba(255, 255, 255, 0.336);
 }
 
- .experiences{
-    text-align: center;
-    justify-content: center;
-    width: 99%;
-    margin-top: 40vh;
- }
-
- .experiences img{
-    height: 50vh;
-    width: 100%;
+ .img-experience {
+    height: 40vh;
+    width: 70vh;
  }
 
  .experienceCarousel{
-    margin-left: 55vh;
-    width: 50%;
+    width: 100%;
+ }
+
+ /**------------------------------------------------------------------------
+ *!                           Contact
+ *------------------------------------------------------------------------**/
+ .contactContainer{
+    margin-top: 5vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+ }
+
+ .contact {
+    padding: 3vh;
+    background: rgba(0, 0, 0, 0.473);
+    border: 0.5vh solid white;
+    width: 80vh;
+    height: 40vh;
+    z-index: 1;
+ }
+
+ .contact p {
+    position: relative;
+    font-family: "EB Garamond", serif;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    z-index: 9;
+ }
+
+ .rowEmail{
+    margin-top: 5vh;
+ }
+
+ .colName{
+    margin-top: 15vh;
  }
