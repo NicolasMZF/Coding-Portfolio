@@ -42,6 +42,12 @@ html, body{
     transform: rotate(180deg);
 }
 
+@media screen and (max-width:560px){
+    .background {
+        height: 550vh;
+    }
+}
+
 
 /**------------------------------------------------------------------------
  *!                           NAVBAR
@@ -58,9 +64,27 @@ html, body{
     padding: 1vh 0;
 }
 
+@media screen and (max-width: 391.50px) {
 .navbar-toggler {
-  border-color: white; /* Optional: change border */
+    position: relative;
+    display: flex;
+    right: 20vh;
+    bottom: 6vh;
+    border-color: white;
 }
+}
+
+@media screen and (min-width:392px) {
+    .navbar-toggler {
+    position: relative;
+    display: flex;
+    right: 43vh;
+    bottom: 0vh;
+    border-color: white;
+}
+}
+
+
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
@@ -85,10 +109,14 @@ html, body{
     text-decoration: underline;
 }
 
-@media screen and (max-width:200vh) {
+@media screen and (max-width:991.20px) {
     .navbarTab {
+        display: flex;
+        position: absolute;
+        left: 0vh;
+        top: 8vh;
         background: #0c041cd5;
-        border: 0.5vh solid white;
+        border: 0.5vh solid rgb(255, 255, 255);
     }
 }
 
@@ -168,6 +196,21 @@ circle {
     z-index: 1;
  }
 
+ @media screen and (max-width: 768px){
+    .forest img {
+        height: 50vhpx;
+    }
+
+    .mountain img {
+        height: 40vh;
+    }
+
+    .forestMountain img{
+        height: 70vh;
+    }
+
+}
+
  @keyframes forest{
     from {
         transform: translateY(0);
@@ -245,6 +288,46 @@ h1, h5, P{
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
     width: 100%;
     height: 80%;
+ }
+
+ @media screen and (max-width:500px) {
+    .professionalContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+}
+
+ .professionalProfile{
+    width: 100%;
+    text-align: center;
+    animation: fadeIn linear forwards;
+    animation-timeline: view(50% 1%);
+    z-index: 1;
+ }
+
+    .professionalProfile p {
+    font-size: large;
+    color: rgb(255, 255, 255);
+ }
+
+    .professionalContainer img {
+    rotate: 20deg;
+    width: 16vh;
+    height: 55vh;
+    border: 1vh solid rgb(0, 0, 0);
+ }
+
+ .professionalProfile .img-container {
+    margin-left: 5vh;
+    display: flex;
+    justify-content: center;
+    rotate: -20deg;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    width: 100%;
+    height: 80%;
+ }
  }
 
 
