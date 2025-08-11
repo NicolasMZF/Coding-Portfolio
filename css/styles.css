@@ -44,7 +44,7 @@ html, body{
 
 @media screen and (max-width:500px){
     .background {
-        height: 580vh;
+        height: 550vh;
     }
 }
 
@@ -187,13 +187,19 @@ circle {
         margin-left: 30vh;
     }
 
+    .navbarTab{
+        display: flex;
+        position: relative;
+        width: 20vh;
+        right: 30vh;
+    }
+
     .nav-link{
         width: 30vh;
         background: #0c041cd5;
         display: flex;
         position: relative;
         justify-content: center;
-        right: 30vh;
     }
 
     .navbar a,
